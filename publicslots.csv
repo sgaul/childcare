@@ -1,0 +1,204 @@
+Location ID ,Location,School Year,Number of Students
+2,Ansonia,2010-11,148
+9,Bethel,2010-11,81
+11,Bloomfield,2010-11,139
+14,Branford,2010-11,40
+15,Bridgeport,2010-11,1764
+17,Bristol,2010-11,321
+24,Chaplin,2010-11,8
+27,Clinton,2010-11,19
+28,Colchester,2010-11,28
+32,Coventry,2010-11,21
+34,Danbury,2010-11,315
+37,Derby,2010-11,36
+43,East Hartford,2010-11,299
+45,East Lyme,2010-11,3
+49,Enfield,2010-11,67
+57,Greenwich,2010-11,134
+58,Griswold,2010-11,38
+59,Groton,2010-11,109
+60,Guilford,2010-11,26
+62,Hamden,2010-11,30
+64,Hartford,2010-11,1956
+69,Killingly,2010-11,89
+74,Litchfield,2010-11,6
+77,Manchester,2010-11,60
+78,Mansfield,2010-11,46
+80,Meriden,2010-11,521
+83,Middletown,2010-11,324
+84,Milford,2010-11,94
+86,Montville,2010-11,8
+88,Naugatuck,2010-11,49
+89,New Britain,2010-11,631
+90,New Canaan,2010-11,17
+91,New Fairfield,2010-11,15
+93,New Haven,2010-11,527
+95,New London,2010-11,197
+96,New Milford,2010-11,28
+94,Newington,2010-11,45
+97,Newtown,2010-11,33
+100,North Canaan,2010-11,13
+101,North Haven,2010-11,15
+103,Norwalk,2010-11,763
+104,Norwich,2010-11,157
+109,Plainfield,2010-11,37
+110,Plainville,2010-11,54
+111,Plymouth,2010-11,32
+216,Pomfret Center,2010-11,17
+113,Portland,2010-11,17
+124,Seymour,2010-11,33
+126,Shelton,2010-11,12
+131,Southington,2010-11,41
+135,Stamford,2010-11,850
+137,Stonington,2010-11,17
+138,Stratford,2010-11,124
+140,Thomaston,2010-11,11
+141,Thompson,2010-11,6
+143,Torrington,2010-11,45
+146,Vernon,2010-11,59
+148,Wallingford,2010-11,27
+151,Waterbury,2010-11,1148
+152,Waterford,2010-11,5
+153,Watertown,2010-11,30
+155,West Hartford,2010-11,5
+156,West Haven,2010-11,399
+159,Wethersfield,2010-11,16
+162,Winchester,2010-11,7
+163,Windham,2010-11,178
+164,Windsor,2010-11,45
+166,Wolcott,2010-11,14
+2,Ansonia,2009-10,161
+9,Bethel,2009-10,79
+11,Bloomfield,2009-10,148
+14,Branford,2009-10,38
+15,Bridgeport,2009-10,1578
+17,Bristol,2009-10,315
+19,Brooklyn,2009-10,9
+24,Chaplin,2009-10,20
+27,Clinton,2009-10,19
+28,Colchester,2009-10,15
+32,Coventry,2009-10,18
+34,Danbury,2009-10,334
+37,Derby,2009-10,37
+43,East Hartford,2009-10,284
+45,East Lyme,2009-10,10
+49,Enfield,2009-10,48
+57,Greenwich,2009-10,81
+58,Griswold,2009-10,34
+59,Groton,2009-10,110
+60,Guilford,2009-10,14
+62,Hamden,2009-10,30
+64,Hartford,2009-10,1916
+69,Killingly,2009-10,98
+74,Litchfield,2009-10,6
+77,Manchester,2009-10,57
+78,Mansfield,2009-10,49
+80,Meriden,2009-10,525
+83,Middletown,2009-10,286
+84,Milford,2009-10,107
+86,Montville,2009-10,19
+88,Naugatuck,2009-10,48
+89,New Britain,2009-10,582
+90,New Canaan,2009-10,20
+91,New Fairfield,2009-10,15
+93,New Haven,2009-10,467
+95,New London,2009-10,185
+96,New Milford,2009-10,15
+94,Newington,2009-10,38
+97,Newtown,2009-10,32
+100,North Canaan,2009-10,15
+101,North Haven,2009-10,13
+103,Norwalk,2009-10,727
+104,Norwich,2009-10,150
+109,Plainfield,2009-10,30
+110,Plainville,2009-10,40
+111,Plymouth,2009-10,34
+113,Portland,2009-10,15
+124,Seymour,2009-10,30
+126,Shelton,2009-10,13
+131,Southington,2009-10,37
+135,Stamford,2009-10,899
+137,Stonington,2009-10,18
+138,Stratford,2009-10,118
+140,Thomaston,2009-10,15
+141,Thompson,2009-10,5
+143,Torrington,2009-10,42
+146,Vernon,2009-10,19
+148,Wallingford,2009-10,28
+151,Waterbury,2009-10,1006
+152,Waterford,2009-10,4
+153,Watertown,2009-10,19
+155,West Hartford,2009-10,8
+156,West Haven,2009-10,393
+159,Wethersfield,2009-10,15
+162,Winchester,2009-10,22
+163,Windham,2009-10,151
+164,Windsor,2009-10,44
+2,Ansonia,2008-09,139
+9,Bethel,2008-09,61
+11,Bloomfield,2008-09,172
+14,Branford,2008-09,37
+15,Bridgeport,2008-09,1681
+17,Bristol,2008-09,266
+19,Brooklyn,2008-09,7
+24,Chaplin,2008-09,19
+27,Clinton,2008-09,20
+28,Colchester,2008-09,13
+32,Coventry,2008-09,14
+34,Danbury,2008-09,308
+37,Derby,2008-09,89
+42,East Hampton,2008-09,1
+43,East Hartford,2008-09,227
+45,East Lyme,2008-09,9
+49,Enfield,2008-09,47
+57,Greenwich,2008-09,96
+58,Griswold,2008-09,17
+59,Groton,2008-09,107
+60,Guilford,2008-09,18
+62,Hamden,2008-09,30
+64,Hartford,2008-09,1883
+69,Killingly,2008-09,98
+74,Litchfield,2008-09,4
+77,Manchester,2008-09,58
+78,Mansfield,2008-09,49
+80,Meriden,2008-09,468
+83,Middletown,2008-09,265
+84,Milford,2008-09,77
+88,Naugatuck,2008-09,48
+89,New Britain,2008-09,600
+90,New Canaan,2008-09,19
+91,New Fairfield,2008-09,15
+93,New Haven,2008-09,428
+95,New London,2008-09,266
+96,New Milford,2008-09,26
+94,Newington,2008-09,42
+97,Newtown,2008-09,23
+100,North Canaan,2008-09,12
+101,North Haven,2008-09,16
+103,Norwalk,2008-09,684
+104,Norwich,2008-09,212
+109,Plainfield,2008-09,36
+110,Plainville,2008-09,28
+111,Plymouth,2008-09,17
+113,Portland,2008-09,18
+124,Seymour,2008-09,49
+126,Shelton,2008-09,4
+131,Southington,2008-09,41
+135,Stamford,2008-09,997
+137,Stonington,2008-09,14
+138,Stratford,2008-09,134
+140,Thomaston,2008-09,15
+141,Thompson,2008-09,5
+143,Torrington,2008-09,40
+146,Vernon,2008-09,90
+148,Wallingford,2008-09,24
+151,Waterbury,2008-09,1203
+152,Waterford,2008-09,3
+153,Watertown,2008-09,15
+155,West Hartford,2008-09,8
+156,West Haven,2008-09,374
+159,Wethersfield,2008-09,10
+162,Winchester,2008-09,31
+163,Windham,2008-09,171
+164,Windsor,2008-09,48
+169,Woodstock,2008-09,14
