@@ -44,58 +44,79 @@ Below are references for some local, regional and national reports that use data
 
 ## Sample results
 
-For individual towns with data available, we can look at health insurance coverage with a few demographic breakouts. First, coverage rates by gender - coverage appears lower among males in all towns, with the lowest rates in Hartford and East Hartford. 
+### Enrollment in pre-K programs
+
+The following results review data on pre-K experience and subsidized childcare and early childhood education slots from the various sources available. 
+
+SDE provides data on the pre-K experience of students that enroll in kindergarten in the state. 
+
+Aggregated for the 30-town CRCOG region shows that roughly 75 percent of students enrolling in kindergarten have had some form of pre-K experience for the past few years. 
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
 
-Pre-K rates for alliance district
+Segmenting further, rates of pre-K experience are lower in the eight Alliance Districts, fluctuating between 50 to 75 percent, while higher-performing districts have had rates closer to 85 percent.
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
 
 
-Pre-K rates by town
+Looking at rates by district shows stability for most towns, although large year-on-year fluctuations for Hartford Public Schools and declining rates in some other districts. 
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
 
-If we look at the last five years, Tolland has the lowest rates of students with pre-K experience. 
+Taking the average rates for the last five years, Tolland Public Schools have the lowest rates of students with pre-K experience, perhaps surprising given that it is among the higher-performing districts and more affluent towns in the region. 
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 
-While towns like Tolland are outliers, the general trend is still for higher rates of pre-K experience in higher income towns. 
+While towns like Tolland are outliers, if we compare median household income and rates of pre-K experience, the general trend is still for higher rates of pre-K experience in higher income towns.
 
 ![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
 
 
-Subsidized childcare slots
+The second primary data source on early education is the American Community Survey. The ACS includes data on school enrollment (public and private), [segmented by age, gender and other variables](http://factfinder2.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_12_1YR_B14003&prodType=table). 
+
+The map below shows the percent of 3-4 year olds that are enrolled in public and private school programs, by town, for the five-year 2007 - 2011 period.
+
+
+```
+Error: cannot open the connection
+```
 
 ![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
 
-The subsidized childcare slots are also available by funding source and with several demographic breakouts. 
+For this data source, the results differ from the SDE data. Tolland (for instance) has one of the highest rates, and Hartford is closer to the middle of the pack. In this view, urban periphery towns like East Hartford, Enfield and Bloomfield have the lowest rates of enrollment in the region.
 
-Care 4 Kids data is available in [the most recent KidsCount report](http://www.cahs.org/pdf/CAHS2013-KIDSCOUNT-ALLPGS-SINGLES.pdf). The report notes that there are 'no surprises' - urban centers have higher enrollment, although some inner-ring suburbs also have high enrollment rates. 
+Since the data is drawn from the ACS, there are also margins of error associated with the values, which can be large for small towns.  
 
 ![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
 
 
-Look at per capita after loading population data from census. 
+Direct comparison shows where the ACS and SDE data agree and disagree. (Both are 5 year averages.) The sources measure slightly different things - the ACS data measures the number of 3 - 4 year olds living in these towns that attend school. The SDE data measures the number of children attending kindergarten in the respective school districts that have some prior pre-kindergarten experience. 
+
+Which data source does a better job identifying the important issues for our region? 
 
 ![plot of chunk unnamed-chunk-8](assets/fig/unnamed-chunk-8.png) 
 
 
-Since the data is drawn from the ACS, there are margins of error associated with the values, which can be large for small towns.  
+### Subsidies for pre-K programs
 
-For this data, the results are different. Tolland has one of the highest rates, and Hartford is closer to the middle of the pack. Rates are generally lower than as reported to SDE. 
+The next set of indicators are on subsidies for pre-K and other childcare programs. 
+
+SDE publishes data on publicly-funded pre-K slots. Not all towns have available slots, but for those with slots, Bloomfield has the highest rate, relative to the size of the 3 - 4 year-old population in the region. 
 
 ![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
 
 
-Direct comparison shows the ACS and SDE data; both are 5 year averages. Which data is better? They measure slightly different things - the ACS data measures the number of 3 - 4 year olds living in these towns that attend school. The SDE data measures the number of children attending kindergarten in the respective school districts that have some prior pre-kindergarten experience. 
+The publicly-funded childcare slots are also available by funding source and with several demographic breakouts. 
 
+Care 4 Kids data is also available in [the most recent KidsCount report](http://www.cahs.org/pdf/CAHS2013-KIDSCOUNT-ALLPGS-SINGLES.pdf). The report notes that there are 'no surprises' - urban centers have higher enrollment, although some inner-ring suburbs also have high enrollment rates. 
+
+In this case, Hartford has the highest rate in the region, followed by Bloomfield and East Hartford where the average number enrolled is more than half of all 3 - 4 year olds living in the town. 
 
 ![plot of chunk unnamed-chunk-10](assets/fig/unnamed-chunk-10.png) 
+
 
 

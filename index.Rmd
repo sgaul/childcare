@@ -44,7 +44,13 @@ Below are references for some local, regional and national reports that use data
 
 ## Sample results
 
-For individual towns with data available, we can look at health insurance coverage with a few demographic breakouts. First, coverage rates by gender - coverage appears lower among males in all towns, with the lowest rates in Hartford and East Hartford. 
+### Enrollment in pre-K programs
+
+The following results review data on pre-K experience and subsidized childcare and early childhood education slots from the various sources available. 
+
+SDE provides data on the pre-K experience of students that enroll in kindergarten in the state. 
+
+Aggregated for the 30-town CRCOG region shows that roughly 75 percent of students enrolling in kindergarten have had some form of pre-K experience for the past few years. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9}
 #Load libraries for graphs
@@ -68,7 +74,7 @@ ggplot(data = prek_region, aes(x = School.Year, y = value)) +
   theme_minimal()
 ```
 
-Pre-K rates for alliance district
+Segmenting further, rates of pre-K experience are lower in the eight Alliance Districts, fluctuating between 50 to 75 percent, while higher-performing districts have had rates closer to 85 percent.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9}
 #Pre-K rates by town
@@ -81,7 +87,7 @@ ggplot(data = prek_alliance, aes(x = School.Year, y = value)) +
   theme_minimal()  
 ```
 
-Pre-K rates by town
+Looking at rates by district shows stability for most towns, although large year-on-year fluctuations for Hartford Public Schools and declining rates in some other districts. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE, fig.height = 12}
 #Pre-K rates by town
@@ -93,12 +99,12 @@ prek_dist$District.Name <- reorder(prek_dist$District.Name, prek_dist$value)
 ggplot(data = prek_dist, aes(x = School.Year, y = value)) + 
   geom_line(aes(group = District.Name)) +
   labs(x = NULL, y = NULL, title = "Pre-K experience rates, Greater Hartford") +
+  scale_x_discrete(breaks = c("2002-2003","2006-2007","2010-11")) + 
   theme_minimal() +
-  ylim(40,100) + 
   facet_wrap( ~ District.Name, ncol = 3)
 ```
 
-If we look at the last five years, Tolland has the lowest rates of students with pre-K experience. 
+Taking the average rates for the last five years, Tolland Public Schools have the lowest rates of students with pre-K experience, perhaps surprising given that it is among the higher-performing districts and more affluent towns in the region. 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 #Pre-K rates by town
@@ -111,7 +117,7 @@ ggplot(data = prek_avg, aes(x = value, y = District.Name)) +
   theme_minimal()
 ```
 
-While towns like Tolland are outliers, the general trend is still for higher rates of pre-K experience in higher income towns. 
+While towns like Tolland are outliers, if we compare median household income and rates of pre-K experience, the general trend is still for higher rates of pre-K experience in higher income towns.
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 #Create column with towns for district names
@@ -127,37 +133,9 @@ ggplot(data = prek_avg, aes(x = value, y = income)) +
   theme_minimal()
 ```
 
-Subsidized childcare slots
+The second primary data source on early education is the American Community Survey. The ACS includes data on school enrollment (public and private), [segmented by age, gender and other variables](http://factfinder2.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_12_1YR_B14003&prodType=table). 
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9}
-#Load data on publicly-funded preK-slots
-publicslots <- read.csv("publicslots.csv")
-publicslots <- subset(publicslots, publicslots$Location %in% levels(towns$Town))
-publicslots$Location <- factor(publicslots$Location)
-#Group and merge by town ID and district ID
-ggplot(data = publicslots) + 
-  geom_path(aes(x = School.Year, y = Number.of.Students, group = Location)) + 
-  labs(x = NULL, y = NULL, title = "Publicly funded slots, Greater Hartford") +
-  theme_minimal() + 
-  facet_wrap(~ Location, ncol = 3)
-```
-
-The subsidized childcare slots are also available by funding source and with several demographic breakouts. 
-
-Care 4 Kids data is available in [the most recent KidsCount report](http://www.cahs.org/pdf/CAHS2013-KIDSCOUNT-ALLPGS-SINGLES.pdf). The report notes that there are 'no surprises' - urban centers have higher enrollment, although some inner-ring suburbs also have high enrollment rates. 
-
-```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9}
-#Load data on Care 4 Kids enrollment
-care4kids <- read.csv("care4kids.csv")
-care4kids <- ddply(care4kids, .(Town), summarise, Enrollment = mean(Enrollment))
-care4kids$Town <- reorder(care4kids$Town, care4kids$Enrollment)
-ggplot(data = care4kids) + 
-  geom_point(aes(x = Enrollment, y = Town)) + 
-  labs(x = NULL, y = NULL, title = "Care 4 Kids enrollment, Greater Hartford") +
-  theme_minimal()
-```
-
-Look at per capita after loading population data from census. 
+The map below shows the percent of 3-4 year olds that are enrolled in public and private school programs, by town, for the five-year 2007 - 2011 period.
 
 ```{r echo = FALSE,warning = FALSE,message = FALSE, fig.width = 10, comment = NA, tidy = F}
 library(ggplot2)
@@ -172,12 +150,14 @@ prek.estimate =
   divide.acs(numerator=(B14003[,4] + B14003[,13] + B14003[,32] + B14003[,41]),
              denominator=(B14003[,4] + B14003[,13] + B14003[,22] + B14003[,32] 
                           + B14003[,41] + B14003[,50]), method = 'proportion')
+pop.estimate = B14003[,4] + B14003[,13] + B14003[,22] + B14003[,32] + B14003[,41] + B14003[,50]
 
 prek.acs = data.frame(town=geography(B14003)[[1]],
                         prek=as.numeric(estimate(prek.estimate)),
-                        se=standard.error(prek.estimate)) 
+                        se=standard.error(prek.estimate),
+                      pop = as.numeric(estimate(pop.estimate))) 
 
-names(prek.acs) <- c("town","prek","se")
+names(prek.acs) <- c("town","prek","se","pop")
 prek.acs$town= gsub(" town, Tolland County, Connecticut", "", prek.acs$town)
 prek.acs$town= gsub(" town, Hartford County, Connecticut", "", prek.acs$town)
 #Merge with data
@@ -198,9 +178,9 @@ ggplot(data = choropleth, aes(long, lat, group = group)) +
   theme_minimal()
 ```
 
-Since the data is drawn from the ACS, there are margins of error associated with the values, which can be large for small towns.  
+For this data source, the results differ from the SDE data. Tolland (for instance) has one of the highest rates, and Hartford is closer to the middle of the pack. In this view, urban periphery towns like East Hartford, Enfield and Bloomfield have the lowest rates of enrollment in the region.
 
-For this data, the results are different. Tolland has one of the highest rates, and Hartford is closer to the middle of the pack. Rates are generally lower than as reported to SDE. 
+Since the data is drawn from the ACS, there are also margins of error associated with the values, which can be large for small towns.  
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 prek.acs <- merge(prek_avg, prek.acs, by = "town")
@@ -215,8 +195,9 @@ ggplot(data = prek.acs) +
   theme_minimal()
 ```
 
-Direct comparison shows the ACS and SDE data; both are 5 year averages. Which data is better? They measure slightly different things - the ACS data measures the number of 3 - 4 year olds living in these towns that attend school. The SDE data measures the number of children attending kindergarten in the respective school districts that have some prior pre-kindergarten experience. 
+Direct comparison shows where the ACS and SDE data agree and disagree. (Both are 5 year averages.) The sources measure slightly different things - the ACS data measures the number of 3 - 4 year olds living in these towns that attend school. The SDE data measures the number of children attending kindergarten in the respective school districts that have some prior pre-kindergarten experience. 
 
+Which data source does a better job identifying the important issues for our region? 
 
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 ggplot(data = prek.acs, aes(x = value / 100, y = prek)) + 
@@ -228,4 +209,49 @@ ggplot(data = prek.acs, aes(x = value / 100, y = prek)) +
   labs(x = "Pre-K experience rates (SDE)", y = "Pre-K experience rates (ACS)") +
   theme_minimal()
 ```
+
+### Subsidies for pre-K programs
+
+The next set of indicators are on subsidies for pre-K and other childcare programs. 
+
+SDE publishes data on publicly-funded pre-K slots. Not all towns have available slots, but for those with slots, Bloomfield has the highest rate, relative to the size of the 3 - 4 year-old population in the region. 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9}
+#Load data on publicly-funded preK-slots
+publicslots <- read.csv("publicslots.csv")
+publicslots <- subset(publicslots, publicslots$Location %in% levels(towns$Town))
+publicslots$Location <- factor(publicslots$Location)
+publicslots <- ddply(publicslots, .(Location), summarise, 
+                     Number.of.Students = mean(Number.of.Students))
+publicslots <- merge(publicslots, prek.acs, by.x = "Location", by.y = "town")
+publicslots$Slots.per.Kid = publicslots$Number.of.Students / publicslots$pop
+publicslots$Location <- reorder(publicslots$Location, publicslots$Slots.per.Kid)
+#Group and merge by town ID and district ID
+ggplot(data = publicslots) + 
+  geom_point(aes(x = Slots.per.Kid, y = Location)) + 
+  scale_x_continuous(labels = percent) + 
+  labs(y = NULL, x = "Average # of publicly funded slots as percent of 3 - 4 year olds population, Greater Hartford") +
+  theme_minimal()
+```
+
+The publicly-funded childcare slots are also available by funding source and with several demographic breakouts. 
+
+Care 4 Kids data is also available in [the most recent KidsCount report](http://www.cahs.org/pdf/CAHS2013-KIDSCOUNT-ALLPGS-SINGLES.pdf). The report notes that there are 'no surprises' - urban centers have higher enrollment, although some inner-ring suburbs also have high enrollment rates. 
+
+In this case, Hartford has the highest rate in the region, followed by Bloomfield and East Hartford where the average number enrolled is more than half of all 3 - 4 year olds living in the town. 
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9}
+#Load data on Care 4 Kids enrollment
+care4kids <- read.csv("care4kids.csv")
+care4kids <- ddply(care4kids, .(Town), summarise, Enrollment = mean(Enrollment))
+care4kids <- merge(care4kids, prek.acs, by.x = "Town", by.y = "town")
+care4kids$Enrollment.Rate = care4kids$Enrollment / care4kids$pop
+care4kids$Town <- reorder(care4kids$Town, care4kids$Enrollment.Rate)
+ggplot(data = care4kids) + 
+  geom_point(aes(x = Enrollment.Rate, y = Town)) + 
+  scale_x_continuous(labels = percent) + 
+  labs(y = NULL, x = "Average Care 4 Kids enrollment (2005 - 2012) as percent of 3-4 year-old population, Greater Hartford") +
+  theme_minimal()
+```
+
 
