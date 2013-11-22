@@ -140,7 +140,7 @@ The second primary data source on early education is the American Community Surv
 
 The map below shows the percent of 3-4 year olds that are enrolled in public and private school programs, by town, for the five-year 2007 - 2011 period.
 
-```{r echo = FALSE,warning = FALSE,message = FALSE, fig.width = 10, comment = NA, tidy = F}
+```{r echo = FALSE,warning = FALSE,message = FALSE, fig.width = 10}
 library(ggplot2)
 library(acs)
 library(maps)
@@ -152,7 +152,7 @@ B14003 = acs.fetch(geography = hartford.towns, table.number = "B14003", col.name
 prek.estimate = 
   divide.acs(numerator=(B14003[,4] + B14003[,13] + B14003[,32] + B14003[,41]),
              denominator=(B14003[,4] + B14003[,13] + B14003[,22] + B14003[,32] 
-                          + B14003[,41] + B14003[,50]), method = 'proportion')
+                          + B14003[,41] + B14003[,50]))
 pop.estimate = B14003[,4] + B14003[,13] + B14003[,22] + B14003[,32] + B14003[,41] + B14003[,50]
 
 prek.acs = data.frame(town=geography(B14003)[[1]],

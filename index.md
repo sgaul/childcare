@@ -82,11 +82,6 @@ The second primary data source on early education is the American Community Surv
 
 The map below shows the percent of 3-4 year olds that are enrolled in public and private school programs, by town, for the five-year 2007 - 2011 period.
 
-
-```
-Error: cannot open the connection
-```
-
 ![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
 
