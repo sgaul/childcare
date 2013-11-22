@@ -12,17 +12,20 @@ mode        : selfcontained # {standalone, draft}
 
 ## Early childhood care and education indicators
 
-Indicators related to childcare, pre-K experience and school readiness. This review combines two indicators that did well in the survey: 
+This review combines two indicators related to childcare, pre-K experience and school readiness that did well in the survey: 
 * % 3-4 yr. olds in Head Start or other pre-school
 * Subsidized childcare slots/1,000 children age 3-5
 
 ## Data and limitations
 
-Different data on early care and education is available from a variety of sources. 
+Data on early care and education is available from two primary sources. 
 
 * The Census provides data on school enrollment through the American Community Survey (ACS). The ACS data is grouped by [age, race, type and level of school](http://factfinder2.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_11_5YR_B14003&prodType=table), but is only available for small geographies over a rolling 3 to 5 year period.
 * The State Department of Education (SDE) provides data on pre-K experience and enrollment, along with data publicly-funded pre-K slots and data on kindergarten-readiness from the kindergarten inventory (KEI). 
-* The Department of Social Services (DSS) provides data on subsidies, such as Care4Kids, that are targeted at early childhood. 
+
+One question is the extent to which these sources ask different questions and tell different stories about pre-K experience for this region. 
+
+The Department of Social Services (DSS) also provides data on subsidies, such as Care4Kids, that are targeted at early childhood. 
 
 ## What do we already know?
 
@@ -48,24 +51,24 @@ Below are references for some local, regional and national reports that use data
 
 The following results review data on pre-K experience and subsidized childcare and early childhood education slots from the various sources available. 
 
-SDE provides data on the pre-K experience of students that enroll in kindergarten in the state. 
+First, SDE provides data on the pre-K experience of students that enroll in kindergarten in the state. 
 
-Aggregated for the 30-town CRCOG region shows that roughly 75 percent of students enrolling in kindergarten have had some form of pre-K experience for the past few years. 
+Aggregated data for the 30-town CRCOG region shows that roughly 75 percent of students enrolling in kindergarten have had some form of pre-K experience for the past few years. 
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
 
-Segmenting further, rates of pre-K experience are lower in the eight Alliance Districts, fluctuating between 50 to 75 percent, while higher-performing districts have had rates closer to 85 percent.
+Segmenting districts, the rates of pre-K experience are lower in the eight Alliance Districts, fluctuating between 50 to 75 percent, while higher-performing districts have had rates closer to 85 percent.
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
 
 
-Looking at rates by district shows stability for most towns, although large year-on-year fluctuations for Hartford Public Schools and declining rates in some other districts. 
+Most districts have fairly stable rates, although there are large year-on-year fluctuations in the SDE data for Hartford Public Schools and declining rates in some other districts. 
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
 
-Taking the average rates for the last five years, Tolland Public Schools have the lowest rates of students with pre-K experience, perhaps surprising given that it is among the higher-performing districts and more affluent towns in the region. 
+For the last five years, Tolland Public Schools have the lowest rates of students with pre-K experience in the region, perhaps surprising given that it is among the higher-performing districts and more affluent towns in the region. 
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
@@ -87,14 +90,14 @@ Error: cannot open the connection
 ![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
 
-For this data source, the results differ from the SDE data. Tolland (for instance) has one of the highest rates, and Hartford is closer to the middle of the pack. In this view, urban periphery towns like East Hartford, Enfield and Bloomfield have the lowest rates of enrollment in the region.
+ACS results differ from the SDE data. Tolland (for instance) has one of the highest rates in the ACS data, and Hartford is closer to the middle of the pack. According to the ACS data, urban periphery towns like East Hartford, Enfield and Bloomfield have the lowest rates of enrollment in the region.
 
 Since the data is drawn from the ACS, there are also margins of error associated with the values, which can be large for small towns.  
 
 ![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
 
 
-Direct comparison shows where the ACS and SDE data agree and disagree. (Both are 5 year averages.) The sources measure slightly different things - the ACS data measures the number of 3 - 4 year olds living in these towns that attend school. The SDE data measures the number of children attending kindergarten in the respective school districts that have some prior pre-kindergarten experience. 
+Direct comparison shows where 5-year average rates from ACS and SDE agree and disagree.  Each measures slightly different things - the ACS data measures the number of 3 - 4 year olds living in these towns that attend school. The SDE data measures the number of children attending kindergarten in the respective school districts that have some prior pre-kindergarten experience. 
 
 Which data source does a better job identifying the important issues for our region? 
 
@@ -105,7 +108,7 @@ Which data source does a better job identifying the important issues for our reg
 
 The next set of indicators are on subsidies for pre-K and other childcare programs. 
 
-SDE publishes data on publicly-funded pre-K slots. Not all towns have available slots, but for those with slots, Bloomfield has the highest rate, relative to the size of the 3 - 4 year-old population in the region. 
+SDE publishes data on publicly-funded pre-K slots. Not all towns have available slots, but for those with slots, Bloomfield has the highest rate relative to the size of the 3 - 4 year-old population in the region. 
 
 ![plot of chunk unnamed-chunk-9](assets/fig/unnamed-chunk-9.png) 
 
